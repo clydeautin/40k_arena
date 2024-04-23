@@ -29,7 +29,6 @@ RSpec.describe Model do
             expect(uriel_v.toughness).to eq(4)
         end
 
-      
         it 'has a save' do
             uriel_v = Model.new('Uriel Ventris', 6, 4, 3, 4, 5, 6, 1)
             expect(uriel_v.save).to eq(3)
