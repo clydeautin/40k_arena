@@ -1,7 +1,5 @@
-require './lib/model.rb'
-require 'pry'
+require './spec/spec_helper'
 
-# frozen_string_literal: true
 RSpec.describe Model do
 
     describe '#initialize' do

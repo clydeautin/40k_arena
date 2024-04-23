@@ -1,5 +1,5 @@
-require './lib/ranged_weapon.rb'
-require 'pry'
+require './spec/spec_helper'
+
 
 RSpec.describe Ranged_weapon do
 
