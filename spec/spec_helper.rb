@@ -1,0 +1,5 @@
+require './lib/ranged_weapon.rb'
+require './lib/model.rb'
+require './lib/melee_weapon.rb'
+require './lib/dice.rb'
+require 'pry'
