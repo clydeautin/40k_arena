@@ -12,7 +12,7 @@ class Model
                 :melee_weapons,
                 :ranged_weapons
 
-    def initialize(name, m, t, sv, inv_sv = nil, w, ld, oc, abilities = nil)
+    def initialize(name, m, t, sv, w, ld, oc, inv_sv = nil, abilities = nil)
         @name = name
         @movement = m
         @toughness = t
@@ -31,7 +31,7 @@ class Model
     end
 
     def dead?
-        @wounds == 0
+        @wounds <= 0
     end
 
     def add_ranged_weapon(r_weapon)

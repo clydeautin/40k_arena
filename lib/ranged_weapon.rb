@@ -29,25 +29,24 @@ class Ranged_weapon
         if hits > 0
             wound_rolls = wound_roll(hits)
             wounds = check_wounds(wound_rolls, target)
-            saved_wounds = armore_saves(wounds, target)
+            saved_wounds = armor_saves(wounds, target)
             final_wounds = wounds - saved_wounds
-
+            
             final_wounds.times { target.wound }
+
             return final_wounds 
         else
             return 0
         end
     end
 
-    def wound_roll(hits)
-        hits.times.map { rand(1..6) }
+    def check_wounds(wound_rolls, target)
+        wound_needed = wound_check(target)
+        wound_rolls.count { |roll| roll >= wound_needed }
     end
 
     def wound_roll(hits)
-        wound_needed = wound_check(target)
-        wound_rolls.count do |roll|
-            roll >= wound_needed
-        end
+        hits.times.map { rand(1..6) }
     end
 
     def wound_check(target)
@@ -65,7 +64,20 @@ class Ranged_weapon
     end
 
     def armor_saves(wounds, target)
-        saves_required = [target.save + @ap, target.invul_save].compact.min
-        wounds.times.count { rand(1..6) >= saves_required }
+        modified_save = target.save + @ap
+        # Determine the best save option: use invulnerable save if it's lower than the modified armor save
+        # and the modified save is above 1, otherwise use the modified save if it's 2 or better.
+        best_save = if target.invul_save && (target.invul_save < modified_save || modified_save > 6)
+                        target.invul_save
+                    else
+                        [modified_save, 7].min # Ensures the save cannot be worse than 6+
+                    end
+        # If the best save required is greater than 6, then no save roll can succeed.
+        if best_save > 6
+            return 0  # All wounds are effective, as saves are impossible
+        else
+            # Count how many wounds are saved based on the best save option available
+            wounds.times.count { rand(1..6) >= best_save }
+        end
     end
 end

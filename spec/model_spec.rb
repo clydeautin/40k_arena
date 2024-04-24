@@ -2,7 +2,7 @@ require './spec/spec_helper'
 
 RSpec.describe Model do
     before(:all) do
-        @uriel_v = Model.new('Uriel Ventris', 6, 4, 3, 4, 5, 6, 1)
+        @uriel_v = Model.new('Uriel Ventris', 6, 4, 3, 5, 6, 1, 4)
     end
 
     describe '#initialize' do
