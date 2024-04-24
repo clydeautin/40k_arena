@@ -7,7 +7,7 @@ This game is inspired by Warhammer 40k tabletop game and more specifically the M
  The game will feature one playable character: Uriel Ventris
  3 Different opponents: Termagant, Chaos Space Marine, Chaos Terminator
 
- How the game works:
+ Overview of how the game works:
 
  - Player will select opponent
  - Player melee's opponent
@@ -17,6 +17,30 @@ This game is inspired by Warhammer 40k tabletop game and more specifically the M
 
  The result is then displayed showing off how many wounds the player ditched out and how many enemy models were killed.
 
+Hit roll: 
+In Warhammer 40k a model needs a successful dice roll in order to hit its intended target in range or melee. Accuracy is determined by a models Ballistic Skill (BS) for ranged weapons and Weapons Skill (WS) in melee
+ie:
+A Space marine with a boltgun and a BS of 3+ needs to roll a 3,4,5,6 in ordsr to hit his desired target
+An ork with with a BS of 5+ needs a 5 or better
+note: a dice roll of "6" is known as a critical hit
+
+Wound Roll:
+In order for a hit to wound we compare the weapons Strength (S) characteristics vs the targets Toughness (T)
+If Strength is double the Toughness a roll of 2 or better is need to wound
+If Strength is greater a 3+ is needed
+If S = T a 4+ is needed
+If S is less than but greater than half T a 5+ is needed
+If S is less than half a 6 is needed
+
+ie: a Space Marine with a boltgun (S4) shoots and Ork (T5). The Space marine player will need to roll a 5 or better to wound the ork after its been hit
+Note: a dice roll of "6" is known as a critical wound
+
+Save Roll
+War in 41 millenium is brutal to say the least so wearing a vest is a minimum requirement
+Once a hit roll then wound roll is successful the targeted model has an apportunity to have its armor save it by rolling a save roll denoted by the models save characteristic (Sv+). This characteristic will be directly affected by a weapons Armor Penetration rating (AP)
+ie: A Space Marine with a Heavy Boltgun wounds an Ork, the gun has AP-1 and the ork a base save of 5+. This means the ork player will need a dice roll of a 6 in order to save the shot otherwise it will lose a wound
+A plasma gun with AP-3 in the sane scenario would go staright through and the ork player would not have a chance for a save
+Invulnerable saves: some 
 
 ## Iteration 2
 - Multiple playable characters
