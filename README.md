@@ -48,6 +48,18 @@ ie:
 - A plasma gun with AP-3 in the sane scenario would go staright through and the ork player would not have a chance for a save
 Invulnerable saves: some armors are especially tough or magic-y so they have an invulnerable save, this ignores AP
 
+Note on Ruby: In Ruby, parameters with default values must be placed after those without defaults. When you mix parameters with and without default values incorrectly, Ruby will throw a syntax error as it cannot correctly parse the method definition. This means that the order to pass in a model's characteristics would be different from the order it is presented in a 40k datasheet and would instead look like this:
+
+1. name - Model's name
+2. m - Movement
+3. t - Toughness
+4. sv - Save
+5. w - Wounds
+6. ld - Leadership
+7. oc - Objective Control
+8. inv_sv - Invulnerable Save (optional)
+9. abilities - Abilities (optional)
+
 ## Iteration 2
 - Multiple playable characters
 - Expand list of enemies
