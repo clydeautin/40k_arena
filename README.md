@@ -17,12 +17,21 @@ This game is inspired by Warhammer 40k tabletop game and more specifically the M
 
  The result is then displayed showing off how many wounds the player ditched out and how many enemy models were killed.
 
- ## Iteration 2
+
+## Iteration 2
+- Multiple playable characters
+- Expand list of enemies
+- Implement
+ - Strategemes
+ - Faction Rules
+ - Detachement rules
+
+## Iteration 3
 
  Let's turn things up
-
- - Player can now pick different playable characters
+ - Connect to 40k API to get a full list of playable and enemy characters
  - Round will now involve the enemy fighting back
  - Player can choose if he fights first or now
+ - Explore units as playable and units enemey
  - Distance between two models can now come into play
    - Player needs to roll a successful dice roll in order to melee
