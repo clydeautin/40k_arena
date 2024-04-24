@@ -1,7 +1,7 @@
 # 40k Arena 
-A game that pits characters from the 40k universe in a fight to death
+A game that pits characters from the 40k universe in a fight to the death.
 
-This game is inspired by Warhammer 40k tabletop game and more specifically the Mathhammer behind the game. Often it's hard to get an idea for how lethal or tough a model might be but finding out the killing impact a model can have can be very useful for your own army or knowing what you're going up against. There are some websites out there to find out the odds of wounds you can place on a specific model but they're all hard to use and not fun at all. So! why not make a game out of it! This project will start as a simple fun game to roll dice and see how many things one can kill next it'll involve into something useful for Warhammer tabletop players and from there it can evolve into a full on Warhammer x Pokemon crossover
+This game is inspired by Warhammer 40k tabletop game and more specifically the Mathhammer(view index) behind the game. Often it's hard to get an idea for how lethal or tough a model might be but finding out the killing impact a model can have can be very useful for your own army or knowing what you're going up against. There are some websites out there to find out the odds of wounds you can place on a specific model but they're all hard to use and not fun at all. So! why not make a game out of it! This project will start as a simple fun game to roll dice and see how many things one can kill next it'll involve into something useful for Warhammer tabletop players and from there it can evolve into a full on Warhammer x Pokemon crossover
 
  ## Iteration 1
 
@@ -18,7 +18,7 @@ This game is inspired by Warhammer 40k tabletop game and more specifically the M
 
  The result is then displayed showing off how many wounds the player ditched out and how many enemy models were killed.
 
-[How shooting works in 40k video](url=https://www.youtube.com/watch?v=P2ubmPDr_Ps)
+[shooting phase rules video](https://www.youtube.com/watch?v=P2ubmPDr_Ps)
 
 <b>Hit roll:</b> 
 In Warhammer 40k a model needs a successful dice roll in order to hit its intended target in range or melee. Accuracy is determined by a models Ballistic Skill (BS) for ranged weapons and Weapons Skill (WS) in melee
@@ -65,3 +65,8 @@ Invulnerable saves: some armors are especially tough or magic-y so they have an 
  - Explore units as playable and units enemey
  - Distance between two models can now come into play
    - Player needs to roll a successful dice roll in order to melee
+  
+
+### Index
+
+![Sternguard mathammer](https://imgur.com/oczmUCZ.png)
