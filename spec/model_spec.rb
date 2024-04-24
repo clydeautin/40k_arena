@@ -72,4 +72,13 @@ RSpec.describe Model do
             expect(@uriel_v.ranged_weapons).to eq([bolt_p2])
         end
     end
+
+    describe '#melee_weapon' do
+        it 'can have melee weapons' do
+            sword_oi= Melee_weapon.new('Sword of Idaeus', 6, 2, 6, 2, 2, 'Sustained Hits 1')
+
+            @uriel_v.add_melee_weapon(sword_oi)
+            expect(@uriel_v.melee_weapons).to eq([sword_oi])
+        end
+    end
 end

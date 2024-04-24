@@ -19,4 +19,13 @@ class Ranged_weapon
         @damage = damage
         @abilities = []
     end
+
+    def shoot
+        hits = 0
+        @attacks.times do
+            roll = rand(1..6)  # Simulate a d6 roll
+            its += 1 if roll > @bs
+        end
+        hits
+    end
 end
