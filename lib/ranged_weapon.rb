@@ -24,17 +24,18 @@ class Ranged_weapon
         hits = 0
         @attacks.times do
             roll = rand(1..6)  # Simulate a d6 roll
-            hits += 1 if roll > @bs
+            hits += 1 if roll >= @bs
         end
         if hits > 0
             wound_rolls = wound_roll(hits)
             wounds = check_wounds(wound_rolls, target)
             saved_wounds = armor_saves(wounds, target)
             final_wounds = wounds - saved_wounds
+            total_damage = final_wounds * damage
             
-            final_wounds.times { target.wound }
+            total_damage.times { target.wound }
 
-            return final_wounds 
+            return total_damage 
         else
             return 0
         end
