@@ -51,9 +51,23 @@ class Game
     def cultist_battle
         puts 'You are fighting a chaos cultist, enter A to start the battle and roll to hit'
 
-        player_hit_roll = gets.chomp.upcase
-        if player_hit == 'A'
-            result = @uriel_v.melee_weapons[0].melee(cultist)
+        player_attack = gets.chomp.upcase
+        if player_attack == 'A'
+            hit_result = @uriel_v.melee_weapons[0].attack(@cultist) # need to find a way to call the exact weapon on the melee_weapon array
+            puts "You landed #{hit_result} wounds on the cultist"
+        else
+            puts "Invalid choice. Exiting battle setup."
+        end
+    end
+    def terminator_battle
+        puts 'You are fighting a chaos Terminator, enter A to start the battle and roll to hit'
+
+        player_attack = gets.chomp.upcase
+        if player_attack == 'A'
+            hit_result = @uriel_v.melee_weapons[0].attack(@terminator) # need to find a way to call the exact weapon on the melee_weapon array
+            puts "You landed #{hit_result} wounds on the terminator"
+        else
+            puts "Invalid choice. Exiting battle setup."
         end
     end
 end
