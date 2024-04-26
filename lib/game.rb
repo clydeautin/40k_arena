@@ -1,10 +1,12 @@
-class Gem
+class Game
 
     def initialize
         @uriel_v = Model.new('Uriel Ventris', 6, 4, 3, 5, 6, 1, 4)
         @cultist = Model.new('Cultist Mob', 6, 3, 6, 1, 7, 1, nil)
         @terminator = Model.new('Terminator', 5, 5, 2, 3, 6, 1, 4)
         @sword_oi = Melee_weapon.new('Sword of Idaeus', 6, 2, 6, 2, 2, 'Sustained Hits 1')
+        
+        @uriel_v.add_melee_weapon(@sword_oi)
     end
 
 # Welcome to 40k Arena you will be fighting as Uriel Ventris against the enemies of the imperium
@@ -19,15 +21,39 @@ class Gem
 
     def start
         puts "Welcome to 40k Arena you will be fighting as Uriel Ventris against the enemies of the imperium"
-        puts 'Enter p to play. Enter q to quit'
+        puts 'Enter P to play. Enter Q to quit'
 
-        start_answer = gets.chomp
-        if start_answer == 'p'
+        start_answer = gets.chomp.upcase
+        case start_answer
+        when 'P'
             play
-        elsif start_answer == 'q'
+        when 'Q'
             puts "Thanks for playing!"
+        else
+            puts "Invalid input. Exiting game."
         end
     end
 
-    
+    def play
+        puts "Pick your opponent: Enter A for Cultist or B for Chaos Terminator"
+        opponent_answer = gets.chomp.upcase
+
+        case opponent_answer
+        when 'A'
+            cultist_battle
+        when 'B'
+            terminator_battle
+        else
+            puts "Invalid choice. Exiting battle setup."
+        end
+    end
+
+    def cultist_battle
+        puts 'You are fighting a chaos cultist, enter A to start the battle and roll to hit'
+
+        player_hit_roll = gets.chomp.upcase
+        if player_hit == 'A'
+            result = @uriel_v.melee_weapons[0].melee(cultist)
+        end
+    end
 end
