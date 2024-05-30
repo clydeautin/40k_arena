@@ -2,7 +2,9 @@
 A game that pits characters from the 40k universe in a fight to the death.
 
 This game is inspired by Warhammer 40k tabletop game and more specifically the Mathhammer(view index) behind the game. Often it's hard to get an idea for how lethal or tough a model might be but finding out the killing impact a model can have can be very useful for your own army or knowing what you're going up against. There are some websites out there to find out the odds of wounds you can place on a specific model but they're all hard to use and not fun at all. So! why not make a game out of it! This project will start as a simple fun game to roll dice and see how many things one can kill next it'll involve into something useful for Warhammer tabletop players and from there it can evolve into a full on Warhammer x Pokemon crossover
-
+The complete game should have 2 modes:
+1. A Mathhammer tool
+2. An interactive game in the pokemon style
  ## Iteration 1
 
  The game will feature one playable character: Uriel Ventris
