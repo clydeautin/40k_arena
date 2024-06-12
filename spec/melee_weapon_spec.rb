@@ -23,7 +23,7 @@ RSpec.describe Melee_weapon do
                                                                 1, 2, 3, 4, 5, 6)  # Successful hit and wound rolls
 
                 # Execute the melee method
-                result = sword_oi.melee(cultist)
+                result = sword_oi.attack(cultist)
 
                 # Check the resulting wounds after being shot
                 expect(result).to eq(10)
@@ -35,7 +35,7 @@ RSpec.describe Melee_weapon do
             it 'wounds but does not kill the Terminator' do
                 allow(brutal_aw).to receive(:rand).and_return(6, 5, 1, 6, 1)  # Hit, wounds and terminator fails one save
                 
-                result = brutal_aw.melee(terminator)
+                result = brutal_aw.attack(terminator)
 
                 expect(result).to eq(1)
                 expect(terminator.wounds).to be 2
@@ -48,7 +48,7 @@ RSpec.describe Melee_weapon do
                                                                 6, 5, 4, 3, 2, # 4 wounds
                                                                 2, 3, 4, 5)  # 2 failed invul saves
                 
-                result = sword_oi.melee(terminator)
+                result = sword_oi.attack(terminator)
 
                 expect(result).to eq(4)
                 expect(terminator.dead?).to be true  # Terminator is dead after taking 4 damage
@@ -60,7 +60,7 @@ RSpec.describe Melee_weapon do
                 allow(sword_oi).to receive(:rand).and_return(6, 5, 4, 3, 2, 1, # 5 hits
                                                                 6, 5, 4, 1, 2, # 3 wounds
                                                                 4, 6, 4, 5)  # 0 failed invul saves
-                result = sword_oi.melee(terminator)
+                result = sword_oi.attack(terminator)
 
                 expect(result).to eq(0)
                 expect(terminator.wounds).to eq 3
